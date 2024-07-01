@@ -1,0 +1,63 @@
+1. Letters (a-z, A-Z) and Digits (0-9):
+Python
+import re
+
+pattern = r"[a-zA-Z0-9]+"  # Matches one or more alphanumeric characters
+
+text = "This1sAString"
+match = re.search(pattern, text)
+
+if match:
+    print("String contains only letters and digits")
+else:
+    print("String contains characters other than letters and digits")
+Use code with caution.
+content_copy
+2. "a" followed by zero or more "b"s:
+Python
+pattern = r"ab*"
+Use code with caution.
+content_copy
+3. "a" followed by one or more "b"s:
+Python
+pattern = r"ab+"
+Use code with caution.
+content_copy
+4. "a" followed by zero or one "b":
+Python
+pattern = r"ab?"
+Use code with caution.
+content_copy
+5. "a" followed by exactly three "b"s:
+Python
+pattern = r"abb{3}"
+Use code with caution.
+content_copy
+6. "a" followed by two or three "b"s:
+Python
+pattern = r"ab{2,3}"  # {2,3} specifies the range (2 or 3)
+Use code with caution.
+content_copy
+7. "a" followed by anything, ending in "b":
+Python
+pattern = r"a.*b"  # .* matches any character zero or more times
+Use code with caution.
+content_copy
+8. Word at the beginning of a string:
+Python
+pattern = r"\b\w+"  # \b matches word boundary, \w matches word character
+Use code with caution.
+content_copy
+9. Word at the end of a string:
+Python
+pattern = r"\w+\b"
+Use code with caution
+content_copy
+10. Four-digit words (0-9, length 4):
+Python
+pattern = r"\d{4}"  # \d matches digit character, {4} specifies length
+
+text = "01 0132 231875 1458 301 2725."
+matches = re.findall(pattern, text)
+
+print(matches)  # Output: ['0132', '1458', '2725']
